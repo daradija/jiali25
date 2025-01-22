@@ -59,6 +59,8 @@ identify the relationship between these elements and the simulation
 objectives. For this, an autodifferentiation technique and a new element
 called the pseudo-gradient are used.
 
+![alt text](image.png)
+
 Autodifferentiation is a technique that allows the gradient of a
 function to be calculated automatically. If, during the simulation, the
 gradient of the utilized elements is computed and these elements carry
