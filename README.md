@@ -1,3 +1,15 @@
+# Abstract
+
+This work presents a methodology that combines optimization processes with simulation.
+The optimization aims to minimize a heuristic function that combines several objectives (the optimization objectives).
+The optimization includes multiple weights that reflect the importance of each factor.
+These weights are then passed to the simulation.
+The simulation uses an autodifferentiation technique along with a pseudo-gradient associated with the weights.
+After the simulation finishes, the gradient of the weights is obtained in the results, together with additional objectives (the simulation objectives).
+The goal is to reduce the optimization weights via gradient descent in accordance with the simulation objectives.
+Then the optimization is repeated with the updated weights.
+This process can be iterative and can be repeated multiple times.
+
 # Introduction
 
 Metaheuristics are optimization techniques that seek to find approximate
