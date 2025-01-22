@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/Users/drd/Library/Mobile Documents/com~apple~CloudDocs/p25/jiali25"?>
+<?latexml class="article" options="12pt"?>
+<?latexml package="inputenc" options="utf8"?>
+<?latexml package="amsmath,amssymb"?>
+<?latexml package="graphicx"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Title of the Article</title>
+  <creator role="author">
+    <personname>Author</personname>
+  </creator>
+  <date role="creation">January 22, 2025</date>
+  <abstract name="Abstract">
+    <p>This work presents a methodology that combines optimization processes with simulation.
+The optimization aims to minimize a heuristic function that combines several objectives (the optimization objectives).
+The optimization includes multiple weights that reflect the importance of each factor.
+These weights are then passed to the simulation.
+The simulation uses an autodifferentiation technique along with a pseudo-gradient associated with the weights.
+After the simulation finishes, the gradient of the weights is obtained in the results, together with additional objectives (the simulation objectives).
+The goal is to reduce the optimization weights via gradient descent in accordance with the simulation objectives.
+Then the optimization is repeated with the updated weights.
+This process can be iterative and can be repeated multiple times.</p>
+  </abstract>
+  <section inlist="toc" xml:id="S1">
+    <tags>
+      <tag>1</tag>
+      <tag role="refnum">1</tag>
+      <tag role="typerefnum">§1</tag>
+    </tags>
+    <title><tag close=" ">1</tag>Introduction</title>
+    <para xml:id="S1.p1">
+      <p>Metaheuristics are optimization techniques that seek to find approximate solutions to complex problems in a reasonable time. These techniques combine different heuristic strategies to efficiently explore the solution space and avoid getting trapped in local optima.</p>
+    </para>
+    <para xml:id="S1.p2">
+      <p>Simheuristics are a combination of metaheuristics and simulation. These techniques use simulation to evaluate the quality of the solutions proposed by the metaheuristic. Simulation is a mathematical model that represents a real system and allows one to study its behavior in a controlled environment. Simulation is used to assess the performance of the solutions proposed by the metaheuristic and guide the search toward optimal solutions.</p>
+    </para>
+    <para xml:id="S1.p3">
+      <p>Simheuristics are usually guided by an optimization of a heuristic that combines multiple objectives.</p>
+    </para>
+    <para xml:id="S1.p4">
+      <p>In simheuristics, simulation takes place after the optimization and compares the optimization result by introducing noise into certain variables.</p>
+    </para>
+    <para xml:id="S1.p5">
+      <p>It is found that the optimization is not always the best solution when noise is introduced into the variables.</p>
+    </para>
+    <para xml:id="S1.p6">
+      <p>From a constructive viewpoint, the workflow moves from optimization to simulation.</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S2">
+    <tags>
+      <tag>2</tag>
+      <tag role="refnum">2</tag>
+      <tag role="typerefnum">§2</tag>
+    </tags>
+    <title><tag close=" ">2</tag>Development</title>
+    <para xml:id="S2.p1">
+      <p>In this work we aim to complete a workflow that goes from simulation to optimization.
+There are objectives that are difficult to optimize but easy to simulate.</p>
+    </para>
+    <para xml:id="S2.p2">
+      <p>This work is based on the hypothesis that certain simulation objectives relate to optimization objectives.</p>
+    </para>
+    <para xml:id="S2.p3">
+      <p>Likewise, when working under a multi-objective approach, weighting the optimization objectives is a difficult task.</p>
+    </para>
+    <para xml:id="S2.p4">
+      <p>With the proposed methodology, we can, for example, aim to minimize infrastructure costs. This is difficult from the optimization stage but easy in the simulation stage.</p>
+    </para>
+    <para xml:id="S2.p5">
+      <p><!--  %**** main.tex Line 50 **** -->It is feasible to optimize a heuristic function that combines multiple objectives. It is feasible to determine in the simulation the cost of other objectives. However, it is difficult to know how these objectives affect the heuristic function.</p>
+    </para>
+    <para xml:id="S2.p6">
+      <p>Typically, the optimization generates a selection of elements. We can identify the influence of the simulation objectives on these elements. For instance, not all elements share the same heuristic.
+To identify the elements is a key step in the methodology. Elements that are not influenced by the simulation objectives can be discarded. Elements must anotate the simulation objectives, in particular the weights of the heuristic function.
+If the simulation receives extra information about the optimization weights for the working elements, we can try to identify the relationship between these elements and the simulation objectives.
+For this, an autodifferentiation technique and a new element called the pseudo-gradient are used.</p>
+    </para>
+    <para xml:id="S2.p7">
+      <p>Autodifferentiation is a technique that allows the gradient of a function to be calculated automatically. If, during the simulation, the gradient of the utilized elements is computed and these elements carry information about the optimization weights, the gradient of the optimization weights can be calculated in relation to the simulation objectives.</p>
+    </para>
+    <para xml:id="S2.p8">
+      <p>With an iterative process of optimization, simulation, optimization, simulation, and so on, we can try to minimize the optimization weights according to the simulation objectives.</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S3">
+    <tags>
+      <tag>3</tag>
+      <tag role="refnum">3</tag>
+      <tag role="typerefnum">§3</tag>
+    </tags>
+    <title><tag close=" ">3</tag>Results</title>
+    <para xml:id="S3.p1">
+      <p>Presentation and discussion of results.</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S4">
+    <tags>
+      <tag>4</tag>
+      <tag role="refnum">4</tag>
+      <tag role="typerefnum">§4</tag>
+    </tags>
+    <title><tag close=" ">4</tag>Conclusions</title>
+    <para xml:id="S4.p1">
+      <p>Final conclusions of the work.</p>
+    </para>
+<!--  %“bibliographystyle–plain˝ 
+     %“bibliography–bibliography˝ -->  </section>
+</document>
